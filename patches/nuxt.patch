@@ -1,0 +1,13 @@
+diff --git a/dist/app/nuxt.js b/dist/app/nuxt.js
+index 1969d753a8b3b44a1915f23d6c83532ac432c25b..97a9423db0ab295b8790d4130621f0709c7b1629 100644
+--- a/dist/app/nuxt.js
++++ b/dist/app/nuxt.js
+@@ -114,7 +114,7 @@ export function createNuxtApp(options) {
+     if (chunkErrorEvent) {
+       window.addEventListener(chunkErrorEvent, (event) => {
+         nuxtApp.callHook("app:chunkError", { error: event.payload });
+-        if (nuxtApp.isHydrating || event.payload.message.includes("Unable to preload CSS")) {
++        if (event.payload.message.includes("Unable to preload CSS")) {
+           event.preventDefault();
+         }
+       });
