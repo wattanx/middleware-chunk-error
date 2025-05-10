@@ -16,7 +16,7 @@
     "vue-router": "^4.5.1"
   },
   "stackblitz": {
-    "startCommand": "npm install pnpm && pnpm run generate && pnpm run preview"
+    "startCommand": "pnpm run generate && pnpm run preview"
   },
   "packageManager": "pnpm@10.10.0"
 }
